@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "d31d0614-9da2-4505-983a-c4c2080b530d",
+		"name": "Calorie-Tracker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addMeal",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionid",
+						"value": "48ec05ae-c8fc-4cc0-97a6-8d73ecbf20781588110609395",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mealName\": \"JackFruit\",\n  \"mealCalories\": 45.36,\n  \"mealDate\": \"2020/03/12\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/meal/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"meal",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateMeal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionid",
+						"value": "12538b5c-15f0-4466-ae28-288c92356e171588112016048",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\": \"5ea8a56175e94173886c7267\",\n  \"mealName\": \"Banana3\",\n  \"mealCalories\": 85.3,\n  \"mealDate\": \"2020/04/12\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/meal/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"meal",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMeal",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionid",
+						"value": "12538b5c-15f0-4466-ae28-288c92356e171588112016048",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\": \"5ea76d757a425d73fd04479e\",\n  \"mealName\": \"Banana3\",\n  \"mealCalories\": 85.3,\n  \"mealDate\": \"05/01/2020\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/meal/remove/5ea76d757a425d73fd04479e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"meal",
+						"remove",
+						"5ea76d757a425d73fd04479e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchMeal",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionid",
+						"value": "12538b5c-15f0-4466-ae28-288c92356e171588112016048",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"mealName\": \"Fruit\",\n  \"mealCalories\": 780,\n  \"mealDate\": \"2021/11/01\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/meal/fetch?minRange=2020/04/12&maxRange=2021/12/01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"meal",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "minRange",
+							"value": "2020/04/12"
+						},
+						{
+							"key": "maxRange",
+							"value": "2021/12/01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchAllUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionId",
+						"value": "aafb5748-a89a-4bf6-9867-6d5814d1102d1588109896329",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"admin@domain.in\",\n  \"password\": \"987654321@qQ\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/admin/fetch/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"admin",
+						"fetch",
+						"users"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchAdminSession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"admin@domain.in\",\n  \"password\": \"987654321@qQ\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchUserSession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"abc@gmail.com\",\n  \"password\": \"987654321@qQ\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fetchUserProfile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionid",
+						"value": "12538b5c-15f0-4466-ae28-288c92356e171588112016048",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/user/profile/fetch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"user",
+						"profile",
+						"fetch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUserProfile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionid",
+						"value": "c4a2b55f-9801-4891-98e3-02502ac0602d1588112820770",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"User123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/user/profile/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"user",
+						"profile",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveUserProfile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"ab.c.d@gmail.com\",\n  \"password\": \"987654321@qQ112\",\n  \"name\": \"user3\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/user/profile/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"user",
+						"profile",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUserSession",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\": \"5ea8627343797539c5496a8c\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/admin/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"admin",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "toggleUserActive",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionId",
+						"value": "13a0c563-2a8a-4225-8d74-eecd48074f101588110108982",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\": \"5ea8627343797539c5496a8c\",\n\t\"isActive\": true\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/admin/toggle/user/active",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"admin",
+						"toggle",
+						"user",
+						"active"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verifySession",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/verify/session?sessionId=bfbe75fe-0d17-48a0-9571-45d529e076bd1588105619642",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"verify",
+						"session"
+					],
+					"query": [
+						{
+							"key": "sessionId",
+							"value": "bfbe75fe-0d17-48a0-9571-45d529e076bd1588105619642"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adminLogout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionid",
+						"value": "52c4ba05-b90f-4296-a9f3-bd24b56cb36b1588110499320",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\": \"5ea8627343797539c5496a8c\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/admin/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"admin",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userLogout",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "sessionid",
+						"value": "ca201b9e-c210-4fbd-b022-d2b8bb99340e1588113021290",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\": \"5ea8627343797539c5496a8c\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:2000/ajax/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2000",
+					"path": [
+						"ajax",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
